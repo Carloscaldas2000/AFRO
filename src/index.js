@@ -1,60 +1,48 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+// Inicializa Firebase
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js';
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js';
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAWvPBVWhFEXJxMeFK19DlEptt3FV5mpzo",
-  authDomain: "afro-d0ef6.firebaseapp.com",
-  projectId: "afro-d0ef6",
-  storageBucket: "afro-d0ef6.appspot.com",
-  messagingSenderId: "784806937516",
-  appId: "1:784806937516:web:361307b1121a15ac177009",
-  measurementId: "G-VJ84D0X5L9"
+    apiKey: "TU_API_KEY",
+    authDomain: "TU_AUTH_DOMAIN",
+    projectId: "TU_PROJECT_ID",
+    storageBucket: "TU_STORAGE_BUCKET",
+    messagingSenderId: "TU_MESSAGING_SENDER_ID",
+    appId: "TU_APP_ID"
 };
 
-// Initialize Firebase
+// Inicializa Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth();
 
-// Registration logic
-const registerButton = document.getElementById("register");
-registerButton.addEventListener("click", (e) => {
-  e.preventDefault();
-  const email = document.getElementById("email-register").value;
-  const password = document.getElementById("password-register").value;
-
-  createUserWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      alert("Registrado con éxito");
-      console.log(userCredential);
-    })
-    .catch((error) => {
-      alert(`Error de registro: ${error.message}`);
-      console.log(error);
-    });
+// Registrar usuario
+const registerForm = document.getElementById('register-form');
+registerForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const email = document.getElementById('register-email').value;
+    const password = document.getElementById('register-password').value;
+    createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+            const user = userCredential.user;
+            alert('Registro exitoso, bienvenido ' + user.email);
+        })
+        .catch((error) => {
+            alert('Error al registrarse: ' + error.message);
+        });
 });
 
-// Login logic
-const loginButton = document.getElementById("login");
-loginButton.addEventListener("click", (e) => {
-  e.preventDefault();
-  const email = document.getElementById("email-login").value;
-  const password = document.getElementById("password-login").value;
-
-  signInWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      // Obtener el nombre del usuario (en este caso, usaremos el email como nombre)
-      const userName = userCredential.user.email;
-
-      // Almacenar el nombre del usuario en localStorage para usarlo en la página de bienvenida
-      localStorage.setItem("userName", userName);
-
-      // Redirigir a la página de bienvenida
-      window.location.href = "bienvenida.html";
-    })
-    .catch((error) => {
-      alert(`Error al iniciar sesión: ${error.message}`);
-      console.log(error);
-    });
+// Iniciar sesión
+const loginForm = document.getElementById('login-form');
+loginForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const email = document.getElementById('login-email').value;
+    const password = document.getElementById('login-password').value;
+    signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+            const user = userCredential.user;
+            alert('Inicio de sesión exitoso, bienvenido ' + user.email);
+        })
+        .catch((error) => {
+            alert('Error al iniciar sesión: ' + error.message);
+        });
 });
