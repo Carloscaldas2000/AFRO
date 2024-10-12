@@ -5,17 +5,31 @@ body, h1, h2, p, input, form {
   box-sizing: border-box;
 }
 
-/* Fondo de video para toda la página */
+/* Fondo transparente y centrado */
 body {
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
   height: 100vh;
-  background: url('videos/tu-video.mp4') no-repeat center center fixed;
-  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Estilo para el video */
+video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
 }
 
 /* Contenedor general para los formularios */
@@ -25,6 +39,8 @@ body {
   padding: 40px;
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 /* Contenedor de los formularios con fondo oscuro semitransparente */
