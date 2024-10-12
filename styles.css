@@ -1,75 +1,58 @@
-/* Resetear estilos básicos */
+/* Reseteo básico */
 body, h1, h2, p, input, form {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Fondo transparente y centrado */
 body {
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
   height: 100vh;
+  background: url('./fondo.jpg') no-repeat center center fixed;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  overflow: hidden;
 }
 
-/* Estilo para el video */
-video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -1;
-  transform: translate(-50%, -50%);
-  object-fit: cover;
-}
-
-/* Contenedor general para los formularios */
 .wrapper {
   display: flex;
   justify-content: space-around;
   padding: 40px;
   max-width: 1200px;
   margin: 0 auto;
-  position: relative;
-  z-index: 1;
 }
 
-/* Contenedor de los formularios con fondo oscuro semitransparente */
 .container {
   background-color: rgba(0, 0, 0, 0.8);
   padding: 20px;
   border-radius: 10px;
   color: white;
   width: 300px;
-  margin: 0 20px;
+  margin: 20px;
 }
 
-/* Título */
 h1 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   text-align: center;
-  color: white;
+  color: black;
   margin-bottom: 20px;
 }
 
-/* Subtítulos */
 h2 {
   font-size: 1.5rem;
   text-align: center;
-  color: white;
   margin-bottom: 20px;
 }
 
-/* Estilo para los inputs de email y contraseña */
+p {
+  text-align: center;
+  color: black;
+  margin-bottom: 20px;
+}
+
 input[type="email"], input[type="password"] {
   width: 100%;
   padding: 10px;
@@ -78,7 +61,6 @@ input[type="email"], input[type="password"] {
   border-radius: 5px;
 }
 
-/* Estilo para los botones de enviar */
 input[type="submit"] {
   background-color: #6a0dad;
   color: white;
@@ -89,7 +71,6 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-/* Efecto hover en los botones */
 input[type="submit"]:hover {
   background-color: #5b0b8e;
 }
