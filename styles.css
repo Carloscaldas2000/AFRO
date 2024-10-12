@@ -1,59 +1,63 @@
 /* Reseteo básico */
-body, h1, h2, p, input, form {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  padding: 0;
   font-family: 'Montserrat', sans-serif;
   height: 100vh;
-  background: url('./fondo.jpg') no-repeat center center fixed;
-  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #fff;
 }
 
+/* Estilos del video de fondo */
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.video-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Estilos del contenido */
 .wrapper {
-  display: flex;
-  justify-content: space-around;
-  padding: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.container {
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 20px;
-  border-radius: 10px;
+  text-align: center;
   color: white;
-  width: 300px;
-  margin: 20px;
+  z-index: 1;
 }
 
 h1 {
-  font-size: 1.8rem;
-  text-align: center;
-  color: black;
-  margin-bottom: 20px;
-}
-
-h2 {
-  font-size: 1.5rem;
-  text-align: center;
+  font-size: 2.5rem;
   margin-bottom: 20px;
 }
 
 p {
-  text-align: center;
-  color: black;
-  margin-bottom: 20px;
+  font-size: 1.2rem;
+  margin-bottom: 40px;
 }
 
-input[type="email"], input[type="password"] {
+.container {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
+  margin: 20px;
+}
+
+input[type="email"],
+input[type="password"] {
   width: 100%;
   padding: 10px;
   margin: 10px 0;
