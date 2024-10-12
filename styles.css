@@ -5,24 +5,20 @@ body, h1, h2, p, input, form {
   box-sizing: border-box;
 }
 
-/* Enlace a la fuente personalizada */
-@font-face {
-  font-family: 'Montserrat';
-  src: url('fonts/Montserrat-Regular.ttf') format('truetype');
-}
-
+/* Fondo de video para toda la página */
 body {
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
   height: 100vh;
-  background: url('./videos/tu-video.mp4') no-repeat center center fixed;
+  background: url('videos/tu-video.mp4') no-repeat center center fixed;
   background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/* Contenedor general para los formularios */
 .wrapper {
   display: flex;
   justify-content: space-around;
@@ -31,6 +27,7 @@ body {
   margin: 0 auto;
 }
 
+/* Contenedor de los formularios con fondo oscuro semitransparente */
 .container {
   background-color: rgba(0, 0, 0, 0.8);
   padding: 20px;
@@ -38,11 +35,26 @@ body {
   color: white;
   width: 300px;
   margin: 0 20px;
-  text-align: center;
 }
 
-input[type="email"],
-input[type="password"] {
+/* Título */
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* Subtítulos */
+h2 {
+  font-size: 1.5rem;
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* Estilo para los inputs de email y contraseña */
+input[type="email"], input[type="password"] {
   width: 100%;
   padding: 10px;
   margin: 10px 0;
@@ -50,6 +62,7 @@ input[type="password"] {
   border-radius: 5px;
 }
 
+/* Estilo para los botones de enviar */
 input[type="submit"] {
   background-color: #6a0dad;
   color: white;
@@ -60,6 +73,7 @@ input[type="submit"] {
   cursor: pointer;
 }
 
+/* Efecto hover en los botones */
 input[type="submit"]:hover {
   background-color: #5b0b8e;
 }
