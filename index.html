@@ -4,30 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cuidado del Cabello Curly</title>
-    <link rel="stylesheet" href="src/styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="wrapper">
         <h1>Bienvenidos al Cuidado del Cabello Curly</h1>
         <p>Explora consejos, productos y peluquerías para cuidar tu cabello curly.</p>
 
+        <!-- Sección de registro -->
         <div class="container">
             <h2>Regístrate</h2>
-            <form action="#">
-                <input type="email" placeholder="Correo electrónico">
-                <input type="password" placeholder="Contraseña">
+            <form id="register-form" action="#">
+                <input type="email" placeholder="Correo electrónico" required>
+                <input type="password" placeholder="Contraseña" required>
                 <input type="submit" value="REGISTRARSE">
             </form>
         </div>
 
+        <!-- Sección de inicio de sesión -->
         <div class="container">
             <h2>Iniciar sesión</h2>
-            <form action="#">
-                <input type="email" placeholder="Correo electrónico">
-                <input type="password" placeholder="Contraseña">
+            <form id="login-form" action="#">
+                <input type="email" placeholder="Correo electrónico" required>
+                <input type="password" placeholder="Contraseña" required>
                 <input type="submit" value="INICIAR SESIÓN">
             </form>
         </div>
     </div>
+
+    <!-- Enlace al archivo JavaScript -->
+    <script src="src/index.js"></script>
 </body>
 </html>
