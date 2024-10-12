@@ -1,0 +1,65 @@
+/* Resetear estilos básicos */
+body, h1, h2, p, input, form {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Enlace a la fuente personalizada */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('fonts/Montserrat-Regular.ttf') format('truetype');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  height: 100vh;
+  background: url('./videos/tu-video.mp4') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  width: 300px;
+  margin: 0 20px;
+  text-align: center;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  background-color: #6a0dad;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #5b0b8e;
+}
