@@ -1,20 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cuidado del Cabello Curly</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="video-background">
-        <video autoplay muted loop id="myVideo">
-            <source src="videos/tu-video.mp4" type="video/mp4">
-            Your browser does not support HTML5 video.
-        </video>
-    </div>
+    <!-- Video de fondo -->
+    <video autoplay muted loop id="video-background">
+        <source src="videos/tu-video.mp4" type="video/mp4">
+        Tu navegador no soporta videos de fondo.
+    </video>
 
+    <!-- Contenido principal -->
     <div class="content">
         <h1>Bienvenidos al Cuidado del Cabello Curly</h1>
         <p>Explora consejos, productos y peluquerías para cuidar tu cabello curly.</p>
@@ -24,13 +23,14 @@
                 <h2>Regístrate</h2>
                 <input type="email" placeholder="Correo electrónico">
                 <input type="password" placeholder="Contraseña">
-                <button onclick="register()">REGISTRARSE</button>
+                <button>REGISTRARSE</button>
             </div>
+
             <div class="form-box">
                 <h2>Iniciar sesión</h2>
                 <input type="email" placeholder="Correo electrónico">
                 <input type="password" placeholder="Contraseña">
-                <button onclick="login()">INICIAR SESIÓN</button>
+                <button>INICIAR SESIÓN</button>
             </div>
         </div>
     </div>
